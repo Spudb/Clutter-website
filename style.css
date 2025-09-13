@@ -1,0 +1,14 @@
+img {
+    width: 200px;
+}
+@font-face {
+    font-family: 'JapanRamen';
+    src: url('fonts/JAPAN\ RAMEN.otf') format('truetype');
+}
+body {
+    text-align: center;
+    font-size: x-small;
+    font-family: 'JapanRamen', Arial, sans-serif;
+    background: azure;
+    color: purple;
+}
