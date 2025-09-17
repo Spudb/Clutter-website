@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Video Downloaders</title>
+        
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vdw-styles.css">
+    <link rel="icon" type="image/x-icon" href="media/red saumrai.png">
+    </head>
+    <body> 
+        <style>
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: rgba(26, 36, 47, 0.3);
+                border-radius: 10px;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.6);
+                border-radius: 10px;
+                border: 2px solid rgba(26, 36, 47, 0.3);
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: rgba(219, 52, 52, 0.6) rgba(26, 36, 47, 0.3);
+            }
+            
+           body {
+                height: 100%;
+                overflow: auto;
+            }
+            
+            .vdw-page {
+                padding-top: 80px;
+                min-height: 100vh;
+                box-sizing: border-box;
+            }      
+        </style>
+
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">Useful<span>Tools</span></a>
+
+                <ul class="nav-menu">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="VDW.html" class="nav-link">Video Downloader</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PDF.html" class="nav-link">PDF Tools</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PMT.html" class="nav-link">Pomodoro Timers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="AIT.html" class="nav-link">AI Tools</a>
+                    </li>
+
+                </ul>
+
+                <button class="hamburger">☰</button>
+            </div>
+        </nav>
+
+        <div class="vdw-page">
+            <h1 class="vdw-title">Video Download Websites</h1>
+            <p class="vdw-description">Discover the best tools for downloading videos from various platforms.</p>
+            
+            <ul class="vdw-list">
+                <li class="vdw-item"><a href="https://en1.savefrom.net/14KS/" target="_blank">SaveFrom</a></li>
+                <li class="vdw-item"><a href="https://ssyoutube.com/en805gE/" target="_blank">SSYouTube</a></li>
+                <li class="vdw-item"><a href="https://v1.yt1s.biz/" target="_blank">yt1s</a></li>
+                <li class="vdw-item"><a href="https://videograb.net/" target="_blank">VideoGrab</a></li>
+                <li class="vdw-item"><a href="https://y2down.cc/en9K/" target="_blank">y2down</a></li>
+                <li class="vdw-item"><a href="https://fastdl.app/en" target="_blank">fastdl</a></li>
+                <li class="vdw-item"><a href="https://snapinsta.to/en" target="_blank">Snapinsta</a></li>
+                <li class="vdw-item"><a href="https://fdown.net/" target="_blank">Fdown</a></li>
+                <li class="vdw-item"><a href="https://publer.com/tools/facebook-video-downloader" target="_blank">Publer</a></li>
+            </ul>
+        </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+         const navMenu = document.querySelector('.nav-menu');
+    
+         hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+         });
+    
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+             });
+         });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+         });
+    
+    </script>
+    </body>
+</html>

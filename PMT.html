@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html> 
     <head>
-        <title>UsefulTools</title>
+        <title>Pomodoro Timers</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vdw-styles.css">
     <link rel="icon" type="image/x-icon" href="media/red saumrai.png">
     </head>
-    <body> 
+    <body>
+        
+        <style>
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: rgba(26, 36, 47, 0.3);
+                border-radius: 10px;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.6);
+                border-radius: 10px;
+                border: 2px solid rgba(26, 36, 47, 0.3);
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            
+            * {
+                scrollbar-width: thin;
+                scrollbar-color: rgba(219, 52, 52, 0.6) rgba(26, 36, 47, 0.3);
+            }
+            
+           body {
+                height: 100%;
+                overflow: auto;
+            }
+            
+            .vdw-page {
+                padding-top: 80px;
+                min-height: 100vh;
+                box-sizing: border-box;
+            }      
+        </style>
 
         <nav>
             <div class="nav-container">
@@ -39,15 +77,22 @@
                 <button class="hamburger">☰</button>
             </div>
         </nav>
+
+
+        <div class="vdw-page">
+            <h1 class="vdw-title">Pomodoro Timers</h1>
+            <p class="vdw-description">Boost your productivity with these Pomodoro technique timers.</p>
+            
+                <ul class="vdw-list">
+                    <li class="vdw-item"><a href="https://tomato-timer.com/" target="_blank">Tomato Timer</a></li>
+                    <li class="vdw-item"><a href="https://pomofocus.io/" target="_blank">Pomofocus</a></li>
+                    <li class="vdw-item"><a href="https://www.marinaratimer.com/" target="_blank">Marinara Timer</a></li>
+                    <li class="vdw-item"><a href="https://pomodoro-tracker.com/" target="_blank">Pomodoro Tracker</a></li>
+                    <li class="vdw-item"><a href="https://www.flow.club/" target="_blank">Flow Club</a></li>
+                </ul>
+        </div>
     
-    <div class="container">
-        <div class="name">
-            Useful Tools Hub
-        </div>
-        <div class="intro">
-            This site collects a set of websites and tools you may find helpful, from video downloaders to AI assistants. Just choose a category from above to explore!
-        </div>
-    </div>
+
 
     <script>
         const hamburger = document.querySelector('.hamburger');

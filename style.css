@@ -1,14 +1,210 @@
-img {
-    width: 200px;
+body{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    font-size: 15.299999999px;
+    background-color: #f5f5f5;
+    position: relative;
+    min-height: 100vh;
+    background-image: url(media/wallpaperflare.com_wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ecf0f1;
+    overflow: hidden;
 }
-@font-face {
-    font-family: 'JapanRamen';
-    src: url('fonts/JAPAN\ RAMEN.otf') format('truetype');
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
-body {
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(media/wallpaperflare.com_wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(1.5px);
+    z-index: -2;
+    transform: scale(1.05);
+}
+
+.name {
+    position: absolute;
+    top: 0.01%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #A23131;
     text-align: center;
-    font-size: x-small;
-    font-family: 'JapanRamen', Arial, sans-serif;
-    background: azure;
-    color: purple;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #240b0b;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: #7e0c0cde;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 0.2rem;
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #852f2f;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: rgba(248, 245, 241, 1);
+    background: #7e0c0c5e;
+}
+
+.nav-link.active {
+    color: rgba(248, 245, 241, 1);
+    background: #522222b6;
+}
+
+.nav-link.active::before {
+    width: 100%;
+}
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #ecf0f1;
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 60px;
+            flex-direction: column;
+            background: rgba(26, 36, 47, 0.98);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: calc(100vh - 60px);
+            transition: left 0.3s ease;
+            padding: 2rem 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-item {
+            margin: 0.5rem 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 1rem;
+            border-radius: 0;
+        }
+    }
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    padding: 70px 70px 70px;
+    max-width: 800px;
+}
+
+.intro {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.6;
+    background-color: #ffd8d877;
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
