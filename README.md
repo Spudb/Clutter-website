@@ -14,6 +14,19 @@ You will find different Pomodoro Timer website links to use. Some of them make y
 ## AI Tools
 There is different AI links to use. Some of them are good for coding, other for writing, and some of them do both.
 
+# Getting Started
+## Prerequisites
++ HTML5
++ Git
++ Modern web browser (Chrome, Firefox, Safari, Edge)
++ Local web server (Live Server, Python HTTP server, etc...)
+## Installation (for development)
+1. Clone the repository:
+```
+git clone https://github.com/Spudb/Clutter-website.git
+```
+Open the folder and run index.html
+
 # Website Screenshots
 <img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/0d4b8c3a-ba08-43ec-af1f-f2e5e4064b81" />
 <img width="1920" height="892" alt="image" src="https://github.com/user-attachments/assets/1a36b30f-121b-46ca-811f-4c9119e4c29b" />
